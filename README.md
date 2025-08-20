@@ -5,6 +5,7 @@
 ## 🎯 主要特色
 
 - **統一設計系統** - 完整的主題管理和設計token
+- **多種主題風格** - 默認現代風格 + 復古終端機風格
 - **豐富的UI組件** - 按鈕、輸入框、加載器、頭像等
 - **UX模式** - 彈窗、操作表單、底部面板等
 - **網絡層** - 基於async/await的HTTP客戶端
@@ -45,6 +46,27 @@ struct ContentView: View {
 1. 將框架添加到您的Xcode項目中
 2. 在需要使用的文件中導入：`import ChiuGaiOSDevKit`（如果是模塊）
 3. 使用`CGDKRoot`作為應用的根視圖來自動設置主題和環境對象
+
+### 復古終端機風格
+```swift
+// 使用復古風格主題
+struct RetroApp: View {
+    var body: some View {
+        CGDKRetroRoot {
+            CGDKRetroContainer(title: "MAIN MENU") {
+                VStack {
+                    CGDKRetroButton("START GAME") { /* action */ }
+                    CGDKRetroButton("OPTIONS", style: .outline) { /* action */ }
+                }
+                .padding(CGDKRetroTokens.Space.lg)
+            }
+            .padding(CGDKRetroTokens.Space.lg)
+        }
+    }
+}
+```
+
+> 查看 `RetroTheme-Guide.md` 獲取復古主題的完整使用指南
 
 ## 📦 主要組件
 
@@ -324,6 +346,31 @@ let customTheme = CGDKTheme(
 
 themeManager.apply(customTheme)
 ```
+
+### 內建主題
+
+框架提供兩種內建主題：
+
+#### 1. 默認現代主題
+```swift
+CGDKRoot { /* 您的內容 */ }
+// 或
+CGDKRoot(theme: .default) { /* 您的內容 */ }
+```
+
+#### 2. 復古終端機主題
+```swift
+CGDKRetroRoot { /* 您的內容 */ }
+// 或  
+CGDKRoot(theme: .retro) { /* 您的內容 */ }
+```
+
+**復古主題特色：**
+- 🖥️ 80年代終端機風格
+- ⚫ 黑色背景 + 白色邊框
+- 🔤 等寬字體系統
+- 📟 復古按鈕和輸入框
+- 🎮 遊戲機界面美學
 
 ## 📱 完整示例
 
