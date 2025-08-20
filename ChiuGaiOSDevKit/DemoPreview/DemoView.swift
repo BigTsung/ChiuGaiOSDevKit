@@ -38,7 +38,7 @@ private struct DemoContent: View {
     }
 }
 
-#Preview("Demo") {
+#Preview("Demo", device: .iPhone15Pro) {
     CGDKDemoView()
         .environmentObject(CGDKThemeManager())
 }
