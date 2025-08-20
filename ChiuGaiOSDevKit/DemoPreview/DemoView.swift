@@ -18,22 +18,96 @@ public struct CGDKDemoView: View {
 
 private struct DemoContent: View {
     @EnvironmentObject var toast: CGDKToastCenter
+    @EnvironmentObject var tm: CGDKThemeManager
+    @State private var text = ""
+    @State private var isLoading = false
+    @State private var showActionSheet = false
+    @State private var showBottomSheet = false
+    
     var body: some View {
         ScrollView {
-            CGDKSectionHeader("ChiuGaDevKit", sub: "Design System")
-            VStack(spacing: CGDKTokens.Space.lg) {
+            CGDKSectionHeader("ChiuGaiOSDevKit", sub: "Design System Demo")
+            
+            CGDKVStack(spacing: .lg) {
+                // Basic Components
                 CGDKCard {
-                    VStack(alignment: .leading, spacing: CGDKTokens.Space.sm) {
-                        Text("統一設計系統").font(CGDKTokens.Font.title())
+                    CGDKVStack(spacing: .sm, alignment: .leading) {
+                        Text("基本組件演示").font(CGDKTokens.Font.title())
                         Text("這是 Card + Tokens + Theme 的示範。")
-                            .foregroundStyle(CGDKTokens.Color.muted)
+                            .foregroundStyle(tm.theme.colors.muted)
                     }
                 }
-                CGDKButton("顯示 Toast") { toast.show("已儲存") }
-                CGDKButton("Danger", style: .danger) {}
-                CGDKButton("Ghost", style: .ghost) {}
+                
+                // Buttons
+                CGDKCard {
+                    CGDKVStack(spacing: .md) {
+                        Text("按鈕組件").font(CGDKTokens.Font.title(18))
+                        CGDKButton("主要按鈕") { toast.show("主要按鈕被點擊") }
+                        CGDKButton("危險按鈕", style: .danger) { toast.show("危險操作") }
+                        CGDKButton("輔助按鈕", style: .ghost) { toast.show("輔助按鈕") }
+                        CGDKLoadingButton("載入按鈕", isLoading: isLoading) {
+                            isLoading = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                isLoading = false
+                                toast.show("載入完成")
+                            }
+                        }
+                    }
+                }
+                
+                // Text Input
+                CGDKCard {
+                    CGDKVStack(spacing: .md, alignment: .leading) {
+                        Text("輸入組件").font(CGDKTokens.Font.title(18))
+                        CGDKTextField("輸入文字", text: $text, validationRules: [
+                            CGDKRequiredRule(),
+                            CGDKMinLengthRule(3)
+                        ])
+                    }
+                }
+                
+                // UX Patterns
+                CGDKCard {
+                    CGDKVStack(spacing: .md) {
+                        Text("UX 模式").font(CGDKTokens.Font.title(18))
+                        CGDKButton("顯示操作選單", style: .ghost) {
+                            showActionSheet = true
+                        }
+                        CGDKButton("顯示底部面板", style: .ghost) {
+                            showBottomSheet = true
+                        }
+                    }
+                }
+                
+                // Empty State
+                CGDKCard {
+                    CGDKEmptyState(
+                        title: "暫無內容",
+                        subtitle: "點擊下方按鈕添加新內容",
+                        systemImage: "plus.circle",
+                        actionTitle: "添加內容"
+                    ) {
+                        toast.show("添加新內容")
+                    }
+                }
             }
-            .padding(CGDKTokens.Space.xl)
+            .cgdkPadding(.xl)
+        }
+        .cgdkActionSheet(isPresented: $showActionSheet, title: "選擇操作", items: [
+            CGDKActionSheetItem(title: "編輯") { toast.show("編輯") },
+            CGDKActionSheetItem(title: "分享") { toast.show("分享") },
+            CGDKActionSheetItem(title: "刪除", style: .destructive) { toast.show("刪除") }
+        ])
+        .cgdkBottomSheet(isPresented: $showBottomSheet) {
+            CGDKVStack(spacing: .lg) {
+                Text("底部面板").font(CGDKTokens.Font.title())
+                Text("這是一個可拖動的底部面板")
+                    .foregroundStyle(tm.theme.colors.muted)
+                CGDKButton("關閉") {
+                    showBottomSheet = false
+                }
+            }
+            .cgdkPadding(.xl)
         }
     }
 }

@@ -17,9 +17,9 @@ public struct CGDKTheme: Equatable {
         }
     }
     public struct Radius: Equatable {              // ✅ 加上 Equatable
-        public let sm, md, lg, pill: CGFloat
-        public init(sm: CGFloat, md: CGFloat, lg: CGFloat, pill: CGFloat) {
-            self.sm = sm; self.md = md; self.lg = lg; self.pill = pill
+        public let sm, md, lg, xl, pill: CGFloat
+        public init(sm: CGFloat, md: CGFloat, lg: CGFloat, xl: CGFloat, pill: CGFloat) {
+            self.sm = sm; self.md = md; self.lg = lg; self.xl = xl; self.pill = pill
         }
     }
 
@@ -37,6 +37,7 @@ public struct CGDKTheme: Equatable {
         radius: .init(sm: CGDKTokens.Radius.sm,
                       md: CGDKTokens.Radius.md,
                       lg: CGDKTokens.Radius.lg,
+                      xl: CGDKTokens.Radius.xl,
                       pill: CGDKTokens.Radius.pill)
     )
 }

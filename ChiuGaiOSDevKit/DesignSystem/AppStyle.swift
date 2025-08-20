@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 public struct CGDKAppStyle: ViewModifier {
     public init() {}
     public func body(content: Content) -> some View {
@@ -16,4 +17,9 @@ public struct CGDKAppStyle: ViewModifier {
             .toolbarTitleDisplayMode(.inline)
     }
 }
-public extension View { func cgdkAppStyle() -> some View { modifier(CGDKAppStyle()) } }
+
+public extension View { 
+    func cgdkAppStyle() -> some View { 
+        modifier(CGDKAppStyle()) 
+    } 
+}
