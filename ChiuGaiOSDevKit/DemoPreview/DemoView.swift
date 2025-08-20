@@ -40,4 +40,5 @@ private struct DemoContent: View {
 
 #Preview("Demo") {
     CGDKDemoView()
+        .environmentObject(CGDKThemeManager())
 }
