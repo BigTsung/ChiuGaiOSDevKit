@@ -90,6 +90,22 @@ private struct DemoContent: View {
                         toast.show("添加新內容")
                     }
                 }
+                
+                // E-Paper Style Demo
+                CGDKCard {
+                    CGDKVStack(spacing: .md) {
+                        Text("E-Paper 復古風格").font(CGDKTokens.Font.title(18))
+                        Text("體驗電子紙風格的極簡設計")
+                            .foregroundStyle(tm.theme.colors.muted)
+                        
+                        NavigationLink(destination: CGDKEPaperCompleteView()) {
+                            Text("查看 E-Paper 演示")
+                                .font(CGDKTokens.Font.body())
+                                .foregroundStyle(tm.theme.colors.brand)
+                                .underline()
+                        }
+                    }
+                }
             }
             .cgdkPadding(.xl)
         }
