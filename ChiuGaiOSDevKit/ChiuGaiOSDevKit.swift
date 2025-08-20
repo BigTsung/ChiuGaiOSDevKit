@@ -1,6 +1,6 @@
 //
-//  ChiuGaDevKit.swift
-//  ChiuGaDevKit
+//  ChiuGaiOSDevKit.swift
+//  ChiuGaiOSDevKit
 //
 //  Created by Chiu on 2025/8/20.
 //

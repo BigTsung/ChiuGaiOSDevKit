@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C891E6BD2E556BC100C42D67 /* ChiuGaDevKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C891E6B12E556BC100C42D67 /* ChiuGaDevKit.framework */; };
+		C891E6BD2E556BC100C42D67 /* ChiuGaiOSDevKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C891E6B12E556BC100C42D67 /* ChiuGaiOSDevKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,19 +21,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C891E6B12E556BC100C42D67 /* ChiuGaDevKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChiuGaDevKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C891E6BC2E556BC100C42D67 /* ChiuGaDevKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChiuGaDevKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C891E6B12E556BC100C42D67 /* ChiuGaiOSDevKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChiuGaiOSDevKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C891E6BC2E556BC100C42D67 /* ChiuGaiOSDevKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChiuGaiOSDevKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C891E6B32E556BC100C42D67 /* ChiuGaDevKit */ = {
+		C891E6B32E556BC100C42D67 /* ChiuGaiOSDevKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ChiuGaDevKit;
+			path = ChiuGaiOSDevKit;
 			sourceTree = "<group>";
 		};
-		C891E6C02E556BC100C42D67 /* ChiuGaDevKitTests */ = {
+		C891E6C02E556BC100C42D67 /* ChiuGaiOSDevKitTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ChiuGaDevKitTests;
+			path = ChiuGaiOSDevKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C891E6BD2E556BC100C42D67 /* ChiuGaDevKit.framework in Frameworks */,
+				C891E6BD2E556BC100C42D67 /* ChiuGaiOSDevKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +60,8 @@
 		C891E6A72E556BC100C42D67 = {
 			isa = PBXGroup;
 			children = (
-				C891E6B32E556BC100C42D67 /* ChiuGaDevKit */,
-				C891E6C02E556BC100C42D67 /* ChiuGaDevKitTests */,
+				C891E6B32E556BC100C42D67 /* ChiuGaiOSDevKit */,
+				C891E6C02E556BC100C42D67 /* ChiuGaiOSDevKitTests */,
 				C891E6B22E556BC100C42D67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,8 +69,8 @@
 		C891E6B22E556BC100C42D67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C891E6B12E556BC100C42D67 /* ChiuGaDevKit.framework */,
-				C891E6BC2E556BC100C42D67 /* ChiuGaDevKitTests.xctest */,
+				C891E6B12E556BC100C42D67 /* ChiuGaiOSDevKit.framework */,
+				C891E6BC2E556BC100C42D67 /* ChiuGaiOSDevKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,9 +88,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C891E6B02E556BC100C42D67 /* ChiuGaDevKit */ = {
+		C891E6B02E556BC100C42D67 /* ChiuGaiOSDevKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C891E6C52E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaDevKit" */;
+			buildConfigurationList = C891E6C52E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaiOSDevKit" */;
 			buildPhases = (
 				C891E6AC2E556BC100C42D67 /* Headers */,
 				C891E6AD2E556BC100C42D67 /* Sources */,
@@ -102,18 +102,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C891E6B32E556BC100C42D67 /* ChiuGaDevKit */,
+				C891E6B32E556BC100C42D67 /* ChiuGaiOSDevKit */,
 			);
-			name = ChiuGaDevKit;
+			name = ChiuGaiOSDevKit;
 			packageProductDependencies = (
 			);
 			productName = ChiuGaDevKit;
-			productReference = C891E6B12E556BC100C42D67 /* ChiuGaDevKit.framework */;
+			productReference = C891E6B12E556BC100C42D67 /* ChiuGaiOSDevKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C891E6BB2E556BC100C42D67 /* ChiuGaDevKitTests */ = {
+		C891E6BB2E556BC100C42D67 /* ChiuGaiOSDevKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C891E6C82E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaDevKitTests" */;
+			buildConfigurationList = C891E6C82E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaiOSDevKitTests" */;
 			buildPhases = (
 				C891E6B82E556BC100C42D67 /* Sources */,
 				C891E6B92E556BC100C42D67 /* Frameworks */,
@@ -125,13 +125,13 @@
 				C891E6BF2E556BC100C42D67 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				C891E6C02E556BC100C42D67 /* ChiuGaDevKitTests */,
+				C891E6C02E556BC100C42D67 /* ChiuGaiOSDevKitTests */,
 			);
-			name = ChiuGaDevKitTests;
+			name = ChiuGaiOSDevKitTests;
 			packageProductDependencies = (
 			);
 			productName = ChiuGaDevKitTests;
-			productReference = C891E6BC2E556BC100C42D67 /* ChiuGaDevKitTests.xctest */;
+			productReference = C891E6BC2E556BC100C42D67 /* ChiuGaiOSDevKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C891E6AB2E556BC100C42D67 /* Build configuration list for PBXProject "ChiuGaDevKit" */;
+			buildConfigurationList = C891E6AB2E556BC100C42D67 /* Build configuration list for PBXProject "ChiuGaiOSDevKit" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -166,8 +166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C891E6B02E556BC100C42D67 /* ChiuGaDevKit */,
-				C891E6BB2E556BC100C42D67 /* ChiuGaDevKitTests */,
+				C891E6B02E556BC100C42D67 /* ChiuGaiOSDevKit */,
+				C891E6BB2E556BC100C42D67 /* ChiuGaiOSDevKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,7 +209,7 @@
 /* Begin PBXTargetDependency section */
 		C891E6BF2E556BC100C42D67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C891E6B02E556BC100C42D67 /* ChiuGaDevKit */;
+			target = C891E6B02E556BC100C42D67 /* ChiuGaiOSDevKit */;
 			targetProxy = C891E6BE2E556BC100C42D67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -440,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C891E6AB2E556BC100C42D67 /* Build configuration list for PBXProject "ChiuGaDevKit" */ = {
+		C891E6AB2E556BC100C42D67 /* Build configuration list for PBXProject "ChiuGaiOSDevKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C891E6C32E556BC100C42D67 /* Debug */,
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C891E6C52E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaDevKit" */ = {
+		C891E6C52E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaiOSDevKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C891E6C62E556BC100C42D67 /* Debug */,
@@ -458,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C891E6C82E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaDevKitTests" */ = {
+		C891E6C82E556BC100C42D67 /* Build configuration list for PBXNativeTarget "ChiuGaiOSDevKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C891E6C92E556BC100C42D67 /* Debug */,
